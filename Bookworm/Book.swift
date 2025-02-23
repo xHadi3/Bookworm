@@ -24,5 +24,18 @@ class Book{
         self.rating = rating
     }
     
+    var isValidBook : Bool {
+        if title.trimmingCharacters(in: .whitespaces).isEmpty ||
+            auther.trimmingCharacters(in: .whitespaces).isEmpty ||
+            genre.trimmingCharacters(in: .whitespaces).isEmpty {
+            
+            return false
+        }
+        
+            return true 
+    }
+    
+   
+    
     
 }
