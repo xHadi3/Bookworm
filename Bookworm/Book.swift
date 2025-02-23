@@ -15,6 +15,7 @@ class Book{
     var genre: String
     var review: String
     var rating: Int
+    var date = Date.now
     
     init(title: String, auther: String, genre: String, review: String, rating: Int) {
         self.title = title
@@ -22,18 +23,10 @@ class Book{
         self.genre = genre
         self.review = review
         self.rating = rating
+       
     }
     
-    var isValidBook : Bool {
-        if title.trimmingCharacters(in: .whitespaces).isEmpty ||
-            auther.trimmingCharacters(in: .whitespaces).isEmpty ||
-            genre.trimmingCharacters(in: .whitespaces).isEmpty {
-            
-            return false
-        }
-        
-            return true 
-    }
+    
     
    
     
